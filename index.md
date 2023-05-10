@@ -1,23 +1,23 @@
 # Third Lab Report - Jun T.
 
-In this lab report, I choose the command `find` and find 4 ways to use it. In example 1 and 2, I use the `-name` option to search for a file in a directory with a specific name. In example 3 and 4, I use the `-type` option to  In example 5 and 6, I use the `-path` option. In example 6 and 8, I use the 
+In this lab report, I choose the command `find` and find 4 ways to use it. In example 1 and 2, I use the `-name` option to search for a file in a directory with a specific name. In example 3 and 4, I use the `-type` option to search for files based on their types. In example 5 and 6, I use the `-path` option to find all the paths that contains a given string. In example 6 and 8, I use the `xargs wc` option to find and count the lines, words, and characters of the files in a given directory.
 
-`find -name`
 
 Example 1:
 
-Find the file `chapter-2.txt` in technical
+The command `find technical -name "chapter-2.txt"` will find the file `chapter-2.txt` in technical.
 
 ```
 (base) JundeAir:docsearch jun.tan.1$ find technical -name "chapter-2.txt"
 
 technical/911report/chapter-2.txt
 ```
+Find it in the [lab report 3 write up](https://ucsd-cse15l-s23.github.io/week/week5/#week5-lab-report).
 
 
 Example 2:
 
-Find all the `txt` files starting with `chapter` in technical
+The command `find technical -name "chapter*.txt"` find all the `txt` files starting with `chapter` in technical.
 
 ```
 (base) JundeAir:docsearch jun.tan.1$ find technical -name "chapter*.txt"
@@ -39,12 +39,12 @@ technical/911report/chapter-12.txt
 technical/911report/chapter-10.txt
 technical/911report/chapter-11.txt
 ```
+Find it in the [lab report 3 write up](https://ucsd-cse15l-s23.github.io/week/week5/#week5-lab-report).
 
-`find -type`
 
 Example 3:
 
-Find all directories in technical
+The command line `find technical -type d` find all directories in technical.
 
 ```
 (base) JundeAir:docsearch jun.tan.1$ find technical -type d
@@ -61,10 +61,12 @@ technical/plos
 technical/biomed
 technical/911report
 ```
+Find it in the website [43 Practical Examples of Linux Find Command](https://sysaix.com/43-practical-examples-of-linux-find-command).
+
 
 Example 4:
 
-Find all `txt` files starting with `rr` in technical
+The command line `find technical -type f -name "rr*.txt"` find all `txt` files starting with `rr` in the technical directory.
 
 ```
 (base) JundeAir:docsearch jun.tan.1$ find technical -type f -name "rr*.txt"
@@ -79,12 +81,12 @@ technical/biomed/rr37.txt
 technical/biomed/rr196.txt
 technical/biomed/rr191.txt
 ```
+Find it in the website [43 Practical Examples of Linux Find Command](https://sysaix.com/43-practical-examples-of-linux-find-command).
 
-find -path
 
 Example 5:
 
-Find all the paths in the biomed directory that contain the string `cvm`.
+The command line `find technical/biomed -path "*cvm*"` find all the paths in the biomed directory that contain the string `cvm`.
 
 ```
 (base) JundeAir:docsearch jun.tan.1$ find technical/biomed -path "*cvm*"
@@ -153,6 +155,8 @@ wc: technical/911report: read: Is a directory
      817    9414   71151 technical/911report/chapter-11.txt
    25728  293434 2236910 total
 ```
+
+Find it in the website [How to Use the Linux xargs Command](https://phoenixnap.com/kb/xargs-command).
    
    Example 8:
    
@@ -165,3 +169,6 @@ wc: technical/911report: read: Is a directory
       51     378    2311 technical/government/Media/Commercial_Appeal.txt
      179    1473    8674 total
 ```
+
+
+Find it in the website [How to Use the Linux xargs Command](https://phoenixnap.com/kb/xargs-command).
