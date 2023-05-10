@@ -1,6 +1,6 @@
 # Third Lab Report - Jun T.
 
-In this lab report, I choose the command `find` and find 4 ways to use it. In example 1 and 2, I use the `-name` option to search for a file in a directory with a specific name. In example 3 and 4, I use the `-type` option to search for files based on their types. In example 5 and 6, I use the `-path` option to find all the paths that contains a given string. In example 6 and 8, I use the `xargs wc` option to find and count the lines, words, and characters of the files in a given directory.
+In this lab report, I choose the command `find` and find 4 ways to use it. In example 1 and 2, I use the `-name` option to search for a file in a directory with a specific name. In example 3 and 4, I use the `-type` option to search for files based on their types. In example 5 and 6, I use the `-empty` option to search for files or directories that are empty or have no content. In example 7 and 8, I use the `xargs wc` option to find and count the lines, words, and characters of the files in a given directory.
 
 
 Example 1:
@@ -86,51 +86,29 @@ Find it in the website [43 Practical Examples of Linux Find Command](https://sys
 
 Example 5:
 
-The command line `find technical/biomed -path "*cvm*"` find all the paths in the biomed directory that contain the string `cvm`.
+The command line `find technical/911report -empty` find empty files in the `911report` directory.
 
 ```
-(base) JundeAir:docsearch jun.tan.1$ find technical/biomed -path "*cvm*"
-
-technical/biomed/cvm-2-1-038.txt
-technical/biomed/cvm-2-6-278.txt
-technical/biomed/cvm-2-4-180.txt
-technical/biomed/cvm-2-6-286.txt
-technical/biomed/cvm-2-4-187.txt
+(base) JundeAir:docsearch jun.tan.1$ find technical/911report -empty
 ```
+
+Find it in the website [How to use find Command in Linux?](https://geekflare.com/how-to-use-find-command-in-linux/).
+
 
 Example 6:
 
-Find all the paths in the technical directory that contain the ends with `*3-3.txt`.
+The command line `find technical/plos -empty` find empty files in the `plos` directory.
 
 ```
-(base) JundeAir:docsearch jun.tan.1$ find technical -path "*3-3.txt"
-
-technical/biomed/1472-6882-3-3.txt
-technical/biomed/1471-2415-3-3.txt
-technical/biomed/1471-2229-3-3.txt
-technical/biomed/1471-2431-3-3.txt
-technical/biomed/1471-213X-3-3.txt
-technical/biomed/1471-2407-3-3.txt
-technical/biomed/1471-2156-3-3.txt
-technical/biomed/1471-2474-3-3.txt
-technical/biomed/1471-230X-3-3.txt
-technical/biomed/1471-2202-3-3.txt
-technical/biomed/1471-5945-3-3.txt
-technical/biomed/1471-2199-3-3.txt
-technical/biomed/1475-2867-3-3.txt
-technical/biomed/1472-6793-3-3.txt
-technical/biomed/1471-2105-3-3.txt
-technical/biomed/1471-2148-3-3.txt
-technical/biomed/1471-2210-3-3.txt
-technical/biomed/1468-6708-3-3.txt
-technical/biomed/1471-2296-3-3.txt
+(base) JundeAir:docsearch jun.tan.1$ find technical/plos -empty
 ```
 
-find |xagrs wc
+Find it in the website [How to use find Command in Linux?](https://geekflare.com/how-to-use-find-command-in-linux/).
+
 
 Example 7:
 
-Count the lines, words, and characters for each files in the `911report` directory.
+The command line `find technical/911report |xargs wc` count the lines, words, and characters for each files in the `911report` directory.
 
 ```
 (base) JundeAir:docsearch jun.tan.1$ find technical/911report |xargs wc
@@ -160,7 +138,7 @@ Find it in the website [How to Use the Linux xargs Command](https://phoenixnap.c
    
    Example 8:
    
-   Count the lines, words, and characters for each files in the `Media` directory that contains the string `Commercial`.
+   The command line `find technical/government/Media/*Commercial* |xargs wc` count the lines, words, and characters for each files in the `Media` directory that contains the string `Commercial`.
    
 ```
 (base) JundeAir:docsearch jun.tan.1$ find technical/government/Media/*Commercial* |xargs wc
