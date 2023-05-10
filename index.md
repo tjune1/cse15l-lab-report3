@@ -40,7 +40,7 @@ technical/911report/chapter-10.txt
 technical/911report/chapter-11.txt
 ```
 
-`find -type
+`find -type`
 
 Example 3:
 
