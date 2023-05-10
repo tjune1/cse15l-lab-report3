@@ -86,7 +86,7 @@ Find it in the website [43 Practical Examples of Linux Find Command](https://sys
 
 Example 5:
 
-The command line `find technical/911report -empty` find empty files in the `911report` directory.
+The command line `find technical/911report -empty` find empty files in the `911report` directory. It turns out that there're no empty files in `911report`.
 
 ```
 (base) JundeAir:docsearch jun.tan.1$ find technical/911report -empty
@@ -97,7 +97,7 @@ Find it in the website [How to use find Command in Linux?](https://geekflare.com
 
 Example 6:
 
-The command line `find technical/plos -empty` find empty files in the `plos` directory.
+The command line `find technical/plos -empty` find empty files in the `plos` directory. It turns out that there're no empty files in `plos`.
 
 ```
 (base) JundeAir:docsearch jun.tan.1$ find technical/plos -empty
