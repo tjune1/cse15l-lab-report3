@@ -46,7 +46,7 @@ Example 3:
 
 Find all directories in technical
 
-'''
+```
 (base) JundeAir:docsearch jun.tan.1$ find technical -type d
 
 technical
@@ -60,13 +60,13 @@ technical/government/Media
 technical/plos
 technical/biomed
 technical/911report
-'''
+```
 
 Example 4:
 
 Find all `txt` files starting with `rr` in technical
 
-'''
+```
 (base) JundeAir:docsearch jun.tan.1$ find technical -type f -name "rr*.txt"
 
 technical/biomed/rr73.txt
@@ -78,7 +78,7 @@ technical/biomed/rr172.txt
 technical/biomed/rr37.txt
 technical/biomed/rr196.txt
 technical/biomed/rr191.txt
-'''
+```
 
 find -path
 
@@ -86,7 +86,7 @@ Example 5:
 
 Find all the paths in the biomed directory that contain the string `cvm`.
 
-‘’‘
+```
 (base) JundeAir:docsearch jun.tan.1$ find technical/biomed -path "*cvm*"
 
 technical/biomed/cvm-2-1-038.txt
@@ -94,13 +94,13 @@ technical/biomed/cvm-2-6-278.txt
 technical/biomed/cvm-2-4-180.txt
 technical/biomed/cvm-2-6-286.txt
 technical/biomed/cvm-2-4-187.txt
-’‘’
+```
 
 Example 6:
 
 Find all the paths in the technical directory that contain the ends with `*3-3.txt`.
 
-‘’‘
+```
 (base) JundeAir:docsearch jun.tan.1$ find technical -path "*3-3.txt"
 
 technical/biomed/1472-6882-3-3.txt
@@ -122,7 +122,7 @@ technical/biomed/1471-2148-3-3.txt
 technical/biomed/1471-2210-3-3.txt
 technical/biomed/1468-6708-3-3.txt
 technical/biomed/1471-2296-3-3.txt
-‘’‘
+```
 
 find |xagrs wc
 
@@ -130,7 +130,7 @@ Example 7:
 
 Count the lines, words, and characters for each files in the `911report` directory.
 
-'''
+```
 (base) JundeAir:docsearch jun.tan.1$ find technical/911report |xargs wc
 
 wc: technical/911report: read: Is a directory
@@ -152,15 +152,16 @@ wc: technical/911report: read: Is a directory
      603    6064   47307 technical/911report/chapter-10.txt
      817    9414   71151 technical/911report/chapter-11.txt
    25728  293434 2236910 total
-   '''
+```
    
    Example 8:
    
    Count the lines, words, and characters for each files in the `Media` directory that contains the string `Commercial`.
    
-   '''
-   (base) JundeAir:docsearch jun.tan.1$ find technical/government/Media/*Commercial* |xargs wc
-   
+```
+(base) JundeAir:docsearch jun.tan.1$ find technical/government/Media/*Commercial* |xargs wc
+
      128    1095    6363 technical/government/Media/CommercialAppealMemphis2.txt
       51     378    2311 technical/government/Media/Commercial_Appeal.txt
-      '''
+     179    1473    8674 total
+```
